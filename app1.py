@@ -1,11 +1,11 @@
 import os
 import streamlit as st
 from azure.cognitiveservices.speech import SpeechConfig, SpeechSynthesizer, AudioConfig, ResultReason
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from openai import OpenAI
 
     # Load environment variables
-# load_dotenv()
+load_dotenv()
 
 def text_to_speech(text, language_code='hi-IN', voice_name='hi-IN-MadhurNeural'):
     speech_key = os.getenv('AZURE_SPEECH_KEY')
@@ -26,8 +26,9 @@ def text_to_speech(text, language_code='hi-IN', voice_name='hi-IN-MadhurNeural')
 # Set up OpenAI API
 client = OpenAI(
     # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI_API_KEY"),
+    api_key=os.environ.get("OPENAI_API_KEY")
 )
+
 
 def generate_response(prompt, language):
     language_instruction = f"User choice is '{language}'."
