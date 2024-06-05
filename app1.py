@@ -6,7 +6,6 @@ from openai import OpenAI
 
     # Load environment variables
 load_dotenv()
-os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 
 def text_to_speech(text, language_code='hi-IN', voice_name='hi-IN-MadhurNeural'):
     speech_key = os.getenv('AZURE_SPEECH_KEY')
