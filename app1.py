@@ -51,7 +51,7 @@ def get_base64_audio(audio_file):
     return base64.b64encode(audio_bytes).decode()
 
 # Streamlit app
-st.title("Text-to-Speech Bot")
+st.title("Text-to-Speech Bot 🤖 😎")
 
 
 # Language selection
